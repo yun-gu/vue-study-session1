@@ -1,11 +1,16 @@
 <template>
   <v-app>
+    <TheHeader />
+
     <v-main>
       <router-view />
     </v-main>
+
+    <TheFooter />
   </v-app>
 </template>
 
-<script lang="ts" setup>
-  //
+<script setup>
+import TheHeader from '@/components/common/TheHeader.vue';
+import TheFooter from '@/components/common/TheFooter.vue';
 </script>

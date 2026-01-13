@@ -11,8 +11,11 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    ChatMessage: typeof import('./components/chat/ChatMessage.vue')['default']
     HelloWorld: typeof import('./components/HelloWorld.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    TheFooter: typeof import('./components/common/TheFooter.vue')['default']
+    TheHeader: typeof import('./components/common/TheHeader.vue')['default']
   }
 }
