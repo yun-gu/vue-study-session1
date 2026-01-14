@@ -29,11 +29,6 @@
             </v-form>
           </v-card-item>
         </v-card>
-
-        <div class="text-center mt-6 text-caption text-medium-emphasis">
-          &copy; 2026 Spring Boot Study
-        </div>
-
       </v-col>
     </v-row>
   </v-container>
@@ -41,11 +36,10 @@
 
 <script setup>
 import { ref } from 'vue';
-import { useRouter } from 'vue-router'; // 라우터 사용을 위해 import
+import { useRouter } from 'vue-router';
 
 const router = useRouter();
 
-// 상태 변수
 const formValid = ref(false); // 폼 전체 유효성 상태
 const nickname = ref('');
 
@@ -60,16 +54,9 @@ const nicknameRules = [
 const submitForm = () => {
   if (!formValid.value) return;
 
-  // 1. (선택사항) 닉네임을 저장소(Pinia, LocalStorage)에 저장
-  // 예: localStorage.setItem('chat-nickname', nickname.value);
-  console.log(`입장 닉네임: ${nickname.value}`);
-
-  // 2. 채팅방 페이지로 이동
-  // 기존의 th:action="@{/chat/room}" 와 동일한 목적지
-  // 쿼리 파라미터로 넘기거나, 상태관리 라이브러리를 사용합니다.
   router.push({
     path: '/chat/room',
-    query: { username: nickname.value } // URL에 ?username=... 로 붙여서 이동
+    query: { username: nickname.value }
   });
 };
 </script>
