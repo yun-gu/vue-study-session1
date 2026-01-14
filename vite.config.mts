@@ -50,6 +50,7 @@ export default defineConfig({
     ],
   },
   define: { 'process.env': {} },
+  assetsInclude: ['**/*.glb'],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('src', import.meta.url)),

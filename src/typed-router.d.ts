@@ -23,6 +23,7 @@ declare module 'vue-router/auto-routes' {
     '/board/write': RouteRecordInfo<'/board/write', '/board/write', Record<never, never>, Record<never, never>>,
     '/chat/enterence': RouteRecordInfo<'/chat/enterence', '/chat/enterence', Record<never, never>, Record<never, never>>,
     '/chat/room': RouteRecordInfo<'/chat/room', '/chat/room', Record<never, never>, Record<never, never>>,
+    '/digitaltwin/robotarm': RouteRecordInfo<'/digitaltwin/robotarm', '/digitaltwin/robotarm', Record<never, never>, Record<never, never>>,
   }
 
   /**
@@ -54,6 +55,10 @@ declare module 'vue-router/auto-routes' {
     }
     'src/pages/chat/room.vue': {
       routes: '/chat/room'
+      views: never
+    }
+    'src/pages/digitaltwin/robotarm.vue': {
+      routes: '/digitaltwin/robotarm'
       views: never
     }
   }
